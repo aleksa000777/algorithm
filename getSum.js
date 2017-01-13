@@ -15,3 +15,8 @@ var getSum = function(a, b) {
 };
 
 getSum(2,3)
+
+var getSum = function(a, b) {
+    return b===0? a:getSum(a^b, (a&b)<<1);
+}
+getSum(1,2) //0001, 0010
