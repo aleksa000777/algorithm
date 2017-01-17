@@ -12,3 +12,7 @@ var addDigits = function(num) {
     if(num <10) return num;
     return num-9*Math.floor((num-1)/9)
 };
+
+var addDigits2 = function(num) {
+ return 1 + (num - 1) % 9;
+}
