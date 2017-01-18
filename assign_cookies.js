@@ -21,3 +21,16 @@ var findContentChildren = function(g, s) {
   
     return result
 };
+
+
+var findContentChildren2 = function(g, s) {
+g.sort(function(a, b){return a - b});
+s.sort(function(a, b){return a - b});
+var i = 0;
+for(var j=0;i<g.length && j<s.length;j++) {
+	if(g[i]<=s[j]) i++;
+}
+return i;
+}
+
+findContentChildren2([1,2,3], [1,1])
