@@ -13,3 +13,17 @@ var moveZeroes = function(nums) {
     }
   }
 };
+
+var moveZeroes2 = function(nums) {
+   var numZerosSoFar = 0;
+    var currNum;
+    for(var i = 0; i < nums.length; i++) {
+        currNum = nums[i];
+        if(currNum == 0) numZerosSoFar++;
+        else nums[i - numZerosSoFar] = currNum; 
+    }
+    for(var i = nums.length - 1; numZerosSoFar > 0; i--, numZerosSoFar--) {
+        nums[i] = 0;
+    }
+
+};
